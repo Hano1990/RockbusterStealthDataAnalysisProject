@@ -1,0 +1,18 @@
+# Average amount paid by the top 5 customers
+SELECT AVG(total_mount_paid) AS average
+FROM
+(SELECT A.customer_id,
+A.first_name
+A.last_name
+D.country AS country_name,
+C.city As city_name,
+SUM (E.amount) AS total_amount_paid
+FROM customer A
+INNER JOIN address B ON A.address_id=B.address_id
+INNER JOIN city C ON B.city_id=C.city_id
+INNER JOIN country D ON C.country_id=D.country_id
+INNER JOIN payment E ON a.customer_id=E.customer_id
+WHERE city IN ('Aurora','So Leopoldo','Teboksary','Ambattur','Shanwei','Citrus Heights','Iwaki','Tianjin','Hami','Cianjur')
+GROUP BY A.customer_id,first_name,last_name,country,city
+ORDER BY total_amount_paid DESC
+LIMIT 5) AS total_amount_paid
