@@ -34,3 +34,6 @@ The data used contain of the following tables:
 - Film_Category Table
 ## Data Source:
 Rockbuster data set linked in the Project Brief file
+## Visualization
+Visualizations were created in Tableau. The link to the dashboard can be found here:
+[Rockbuster Visuals](https://public.tableau.com/views/Rockbuster_16898117390630/RockbusterStealthProject?:language=en-US&:display_count=n&:origin=viz_share_link)
